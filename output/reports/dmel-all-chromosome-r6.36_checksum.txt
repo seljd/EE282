@@ -1,0 +1,1 @@
+fbd2855a20c3610050ff2496dd975821  data/raw/dmel-all-chromosome-r6.36.fasta.gz

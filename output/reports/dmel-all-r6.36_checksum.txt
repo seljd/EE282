@@ -1,0 +1,1 @@
+9085d2f3d2449fc1f6159015511240b8  data/raw/dmel-all-r6.36.gtf.gz
