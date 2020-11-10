@@ -12,14 +12,14 @@ cd ~/homework3/
 ## Problem 1: Summarize Genome Assembly
 The code file for answering this question is at `code/scripts/all_genome_code_Q1.sh`. 
 ### File Integrity
-The checksum generated for the downloaded file using `md5sum` is **fbd2855a20c3610050ff2496dd975821**, which is the same as the one given in `md5sum.txt` [here](ftp://ftp.flybase.net/genomes/dmel/current/fasta/md5sum.txt). This checksum is saved at `output/reports/dmel-all-chromosome-r6.36_checksum.txt`.
+The checksum generated for the downloaded file using `md5sum` is **fbd2855a20c3610050ff2496dd975821**, which is the same as the one given in `md5sum.txt`. This checksum is saved at `output/reports/dmel-all-chromosome-r6.36_checksum.txt`.
 ### Calculate summaries of the genome
 After running the code file `code/scripts/all_genome_code_Q1.sh`, I found that there are **143726002 bases**, **1152978 Ns** and **1870 sequences**. Refer to file `data/processed/dmel_all_chromosome.unsorted.highlevelSum.txt` for the output of `faSize`.  
 ## Problem 2: Summarize an Annotation File
 The code file for answering this question is at `code/scripts/annota_Q1Q2_code.sh`. 
 ### File Integrity
 The checksum generated for the downloaded file using `md5sum` is
-**9085d2f3d2449fc1f6159015511240b8**, which is the same as the one given in `md5sum.txt` [here](ftp://ftp.flybase.net/genomes/dmel/current/gtf/md5sum.txt). This checksum is saved at `output/reports/dmel-all-r6.36_checksum.txt`.
+**9085d2f3d2449fc1f6159015511240b8**, which is the same as the one given in `md5sum.txt`. This checksum is saved at `output/reports/dmel-all-r6.36_checksum.txt`.
 ### Compile a Report Summarizing the Annotation
 * After running the code file `code/scripts/annota_Q1Q2_code.sh`, I obtained the following result for the total number of features of each type: 
 
