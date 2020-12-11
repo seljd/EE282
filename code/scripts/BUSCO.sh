@@ -6,3 +6,5 @@ busco -c 18 -i data/raw/Dmel_scaff.fa -l diptera_odb10 -o Dmel_busco_scaff -m ge
 gunzip -c data/raw/ISO1.r6.ctg.fa.gz > data/raw/Dmel_ctg.fa
 busco -c 18 -i data/raw/Dmel_ctg.fa -l diptera_odb10 -o Dmel_busco_ctg -m genome
 
+busco -c 31 -i data/processed/unitigs.fa -l diptera_odb10 -o busco_min -m genome
+
