@@ -17,6 +17,7 @@ The code for getting sequences length and GC percentage is `code/scripts/chromLe
 
 * Sequence length distribution. Use a histogram!  
 This plot is done using `Rstudio`, the markdown file is `ee282Homework4Rnotebook.Rmd`. Plots are saved at `/output/figures`.
+![Alt text](https://github.com/seljd/ee282/blob/homework4/output/figures/smlSeqLength.png)
 * Sequence GC% distribution. Use a histogram!  
 This plot is done using `Rstudio`, the markdown file is `ee282Homework4Rnotebook.Rmd`. Plots are saved at `/output/figures`.
 * Cumulative sequence size sorted from largest to smallest sequences.  
