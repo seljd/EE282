@@ -1,0 +1,47 @@
+---
+title: "ee282 homework4 R notebook"
+output: html_notebook
+---
+
+
+```{r}
+library("seqinr")
+library("ggplot2")
+```
+
+```{r}
+sml100length = as.data.frame(read.table("output/reports/sml100length.txt"))
+grt100length = as.data.frame(read.table("output/reports/grt100length.txt"))
+```
+
+```{r}
+ggplot(sml100length, aes(x=V2)) +
+  geom_histogram(bins = 25)+
+  scale_x_log10()+
+  xlab("sequence length")+
+  ggtitle("Sequence length distribution for all sequences with length <= 100kb")
+```
+
+```{r}
+ggplot(sml100length, aes(x=V3)) +
+  geom_histogram(bins = 30)+
+  xlab("%GC")+
+  ggtitle("%GC distribution for all sequences with length <= 100kb")
+```
+
+```{r}
+ggplot(grt100length, aes(x=V2)) +
+  geom_histogram(bins = 10)+
+  scale_x_log10()+
+  xlab("sequence length")+
+  ggtitle("Sequence length distribution for all sequences with length > 100kb")
+```
+
+```{r}
+ggplot(grt100length, aes(x=V3)) +
+  geom_histogram(bins = 10)+
+  xlab("%GC")+
+  ggtitle("% GC distribution for all sequences with length > 100kb")
+```
+
+
