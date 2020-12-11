@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 gunzip -c data/processed/dmel-all-chromosome-r6.36_sml100.fasta.gz \
 | faSize -detailed /dev/stdin \
 | sort -rnk 2,2 \
