@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 chrom=ftp://ftp.flybase.net/genomes/dmel/current/fasta/dmel-all-chromosome-r6.36.fasta.gz
 wget -O - -q $chrom > data/raw/dmel-all-chromosome-r6.36.fasta.gz
 
