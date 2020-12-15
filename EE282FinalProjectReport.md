@@ -56,13 +56,13 @@ Since the core clock gene network is well-documented, looking into how well the 
 The results of correlation test for ependymal cells and neurons are shown in the correlation plots. Since the genes whose expression distributions are not normal are excluded in the test, the genes involved in the correlation tests for the two cell types are different. Blue represents positive correlation, which means one increases as the other increases, while red represents negative correlation, which means one decreases as the other increases. Non-significant correlations are crossed out and the p-value cut off is 0.05.  
 <p float="left">
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_cor.png" width="450" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor.png" width="350" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor.png" width="400" /> 
 </p> 
 
 Since different genes are included in the two cell types, it is only fair to compare the correlations between genes that show up in correlation plots for both cell types. Below is the cleaned-up version of the correlation plot for both ependymal cells and neurons. The number of non-significant correlations between pairs of genes are similar in the two cell types (23 in ependymal cells and 22 in neurons). Interestingly, some of the negative expression correlations between *Clock*, *Nfil3* and other genes are only significant in the ependymal cells.
 <p float="left">
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_cor_sig.png" width="450" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor_sig.png" width="350" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor_sig.png" width="400" /> 
 </p>
 
 ## Discussion
