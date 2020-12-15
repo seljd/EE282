@@ -19,25 +19,25 @@ For the correlation tests between different core clock genes, I used the average
 ### Spaghetti plots
 I picked three genes to plot in spaghetti plots for both ependymal cells and neurons: *Arntl*, *Per2* and *Dbp*.  In each figure, the blue lines are the cell groups discussed in the method section and the pink dots are the random cells involved in those blue lines. There are pink dots with very high expression level, but the blue lines stay in the low value region. This is because of the massive number of dropouts in the original dataset, which is the nature of single-cell RNAseq data. Those dropouts cause many cells to have 0 expression level and thus when averaged with cells with high expression level, the results are low.  
 <p float="left">
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_Arntl.png" width="100" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_per2.png" width="100" /> 
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_Dbp.png" width="100" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_Arntl.png" width="300" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_per2.png" width="300" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_Dbp.png" width="300" />
 </p>
 <p float="left">
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_Arntl.png" width="100" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_per2.png" width="100" /> 
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_Dbp.png" width="100" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_Arntl.png" width="300" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_per2.png" width="300" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_Dbp.png" width="300" />
 </p>
 To see the pattern formed by the spaghetti lines, a zoomed in version of the plots without the pink dots are also generated.  
 <p float="left">
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_arntl_line.png" width="100" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_per2_line.png" width="100" /> 
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_dbp_line.png" width="100" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_arntl_line.png" width="300" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_per2_line.png" width="300" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_dbp_line.png" width="300" />
 </p>
 <p float="left">
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_arntl_line.png" width="100" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_per2_line.png" width="100" /> 
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_dbp_line.png" width="100" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_arntl_line.png" width="300" />
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_per2_line.png" width="300" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_dbp_line.png" width="300" />
 </p>
 From those figures, we see that the expression of *Dbp* is more synchronized and at higher level in ependymal cells than in neurons. The same goes to expression of *Arntl*. Also for both of the genes, the distribution of the non-zero pink dots are wider in neurons than in ependymal cells, another indication that the neurons are less synchronized, as we would expect that in a synchronized cell population, the expression level would peak and trough at the same time, to form relatively narrower expression distribution at the peak and trough time points. However, the expression of *Per2* in neither ependymal nor neurons form strong circadian pattern, with the neurons spaghetti lines appearing to be more synchronized than the ependymal cells.   
 ### Correlation test
