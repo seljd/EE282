@@ -8,8 +8,11 @@ In the paper, *Spatiotemporal single-cell analysis of gene expression in the mou
 In this report, I test two methods that may help to give some preliminary insights into which of the two scenarios mentioned above causes the differences in clock gene expression amplitudes in ependymal cells and neurons. The first one involves looking at the spaghetti plot of gene expressions, while the second one looks at the cell-type level expression correlations between pairs of different core clock genes. 
 
 ## Methods
-The raw data can be downloaded [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117295). However, since I’m also using this dataset for my current research project with Dr. Bogi Andersen and Dr. John Lowengrub, I have already performing clustering on this dataset using the `Seurat` package in `RStudio` and decided cell types for the clusters by plotting expression level of marker genes as feature plots. Hence, for this final project, I start with the labeled `Seurat` object and focus on the ependymal cells and neurons. The labeled `Seurat` object can be found HERE LINK.  
-![Alt text](https://github.com/seljd/ee282/blob/final-report/output/figures/scn.whole.tsne.with.names.jpeg)
+The raw data can be downloaded [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE117295). However, since I’m also using this dataset for my current research project with Dr. Bogi Andersen and Dr. John Lowengrub, I have already performing clustering on this dataset using the `Seurat` package in `RStudio` and decided cell types for the clusters by plotting expression level of marker genes as feature plots. Hence, for this final project, I start with the labeled `Seurat` object and focus on the ependymal cells and neurons. The labeled `Seurat` object can be found in my google drive [here](https://drive.google.com/drive/folders/1PtoOpW8LOpGUUgLlvnHCEVdXziSUgyc6?usp=sharing).  
+<p float="left">
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/scn.whole.tsne.with.names.jpeg" width="450" />
+</p>
+
 The first step is to get the expression of some core clock genes from the `Seurat` object. I decided to focus on the genes that are found to show rhythmic expression in [Wen 2019], and a few additional core clock genes. In the end, the core clock genes included in the analysis in this report are *Arntl*, *Clock*, *Npas2*, *Per1*, *Per2*, *Per3*, *Cry1*, *Nr1d1*, *Nr1d2*, *Rora*, *Rorb*, *Dbp*, *Nfil3*, *Tef*, *Hlf*, *Bhlhe41* and *Ciart*. I used the `FetchData` function to get and store information about cell type, circadian time, sample batch and expression levels of the core clock genes mentioned above in columns. Rows of this data frame are cells. Note that at this point all the cells in the dataset are in the data frame. Then for each gene, I scaled the expression levels, so they are between 0 and 1, with the highest level adjusted to be 1 and lowest adjusted to be 0. Since all the cell types are scaled together, it is reasonable to compare between different cell types. I call this data frame `clock.expression` in my code.  
 
 ### Spaghetti plots
@@ -33,6 +36,7 @@ I picked three genes to plot in spaghetti plots for both ependymal cells and neu
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_per2.png" width="300" /> 
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_Dbp.png" width="300" />
 </p>
+
 To see the pattern formed by the spaghetti lines, a zoomed in version of the plots without the pink dots are also generated.  
 <p float="left">
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_arntl_line.png" width="300" />
@@ -44,6 +48,7 @@ To see the pattern formed by the spaghetti lines, a zoomed in version of the plo
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_per2_line.png" width="300" /> 
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_dbp_line.png" width="300" />
 </p>
+
 From those figures, we see that the expression of *Dbp* is more synchronized and at higher level in ependymal cells than in neurons. The same goes to expression of *Arntl*. Also for both of the genes, the distribution of the non-zero pink dots are wider in neurons than in ependymal cells, another indication that the neurons are less synchronized, as we would expect that in a synchronized cell population, the expression level would peak and trough at the same time, to form relatively narrower expression distribution at the peak and trough time points. However, the expression of *Per2* in neither ependymal nor neurons form strong circadian pattern, with the neurons spaghetti lines appearing to be more synchronized than the ependymal cells.   
 
 ### Correlation test
@@ -51,12 +56,13 @@ Since the core clock gene network is well-documented, looking into how well the 
 The results of correlation test for ependymal cells and neurons are shown in the correlation plots. Since the genes whose expression distributions are not normal are excluded in the test, the genes involved in the correlation tests for the two cell types are different. Blue represents positive correlation, which means one increases as the other increases, while red represents negative correlation, which means one decreases as the other increases. Non-significant correlations are crossed out and the p-value cut off is 0.05.  
 <p float="left">
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_cor.png" width="450" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor.png" width="450" /> 
-</p>
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor.png" width="350" /> 
+</p> 
+
 Since different genes are included in the two cell types, it is only fair to compare the correlations between genes that show up in correlation plots for both cell types. Below is the cleaned-up version of the correlation plot for both ependymal cells and neurons. The number of non-significant correlations between pairs of genes are similar in the two cell types (23 in ependymal cells and 22 in neurons). Interestingly, some of the negative expression correlations between *Clock*, *Nfil3* and other genes are only significant in the ependymal cells.
 <p float="left">
   <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/epen_cor_sig.png" width="450" />
-  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor_sig.png" width="450" /> 
+  <img src="https://github.com/seljd/ee282/blob/final-report/output/figures/neu_cor_sig.png" width="350" /> 
 </p>
 
 ## Discussion
